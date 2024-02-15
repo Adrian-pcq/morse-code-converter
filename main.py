@@ -8,4 +8,14 @@ for i in BAD_CHARS:
     user_input = user_input.replace(i, "")
 
 list_input = user_input.split()
-print (list_input)
+
+translated = ''
+for char in user_input:
+    if char == " ":
+        translated = translated + "\n"
+
+    elif international_morse[char]:
+        translated = translated + international_morse[char]
+    
+
+print(translated)
